@@ -19,7 +19,7 @@ export default function BotMessage({ fetchMessage, showRecorder }) {
 
           // Skip delay for spaces
           if (response.message[i] !== " ") {
-            await new Promise((resolve) => setTimeout(resolve, 30));
+            await new Promise((resolve) => setTimeout(resolve, 25));
           }
         }
       } catch (error) {

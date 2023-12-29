@@ -1,61 +1,27 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 1rem; */
+  /* padding-top: 2rem; */
   text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* ***************************************************************************** */
 
 .chatbot {
   font-family: monospace;
-  border-radius: 10px;
-  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  box-shadow: 16px 18px 30px 0 rgba(0, 0, 0, 0.50);
   background: #f5f8fb;
   text-align: center;
   display: flex;
   flex-flow: column;
-  width: 500px;
+  width: 330px;
   overflow: hidden;
+
 }
 
 .header {
@@ -83,29 +49,19 @@
 
 .bot-message {
   float: left;
-  padding: 15px 20px;
+  padding: 10px 10px;
   margin: 5px;
   border-radius: 20px 20px 20px 1px;
   background: #00aaa5;
   color: white;
-  max-width: 280px;
+  max-width: 200px;
   white-space: pre-line;
   text-align: left;
 }
 
-/* .bot-message {
-  float: left;
-  padding: 15px 20px;
-  margin: 5px;
-  border-radius: 20px 20px 20px 1px;
-  background: #00aaa5;
-  color: white;
-  min-width: 40px;
-} */
-
 .user-message {
   float: right;
-  padding: 15px 10px;
+  padding: 10px 10px;
   margin: 10px;
   border-radius: 20px 20px 1px 20px;
   background: #cccccc;
@@ -143,11 +99,66 @@
   border-bottom-right-radius: 10px;
   box-shadow: none;
   cursor: pointer;
-  fill: #4a4a4a;
+  fill: #ffffff;
   opacity: 1;
   outline: none;
   padding: 14px 16px 12px 16px;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.footer {
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recorderElement {
+  text-align: center;
+  width: 500px;
+  height: 500px;
+}
+
+.contact-info {
+  visibility: hidden;
+}
+
+.contact-info-2 {
+  color: black;
+  opacity: calc(0.3);
+  position: relative;
+  bottom: 60px;
+}
+
+/* lg to xl css */
+@media screen and (min-width: 1024px) {
+  .messages {
+
+    height: 400px;
+
+  }
+
+  .contact-info {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    color: black;
+    visibility: visible;
+    margin: 0px;
+  }
+
+  .contact-info-2 {
+    visibility: hidden;
+  }
+
+  .chatbot {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
