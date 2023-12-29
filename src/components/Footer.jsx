@@ -9,10 +9,9 @@ const Footer = ({ onSendAudio }) => {
       autoGainControl: false,
       volume: 1.0,
     },
-    (err) => console.table(err) // onNotAllowedOrFound
+    (err) => console.table(err)
   );
 
-  // Function to convert audio chunks to a blob
   const chunksToBlob = (chunks) => {
     try {
       const audioBlob = new Blob(chunks, { type: "audio/mp3" });
@@ -31,7 +30,6 @@ const Footer = ({ onSendAudio }) => {
 
     const url = URL.createObjectURL(blob);
 
-    // Simulate a user message with audio
     const userAudioMessage = {
       type: "audio",
       audio: {
@@ -40,7 +38,6 @@ const Footer = ({ onSendAudio }) => {
       },
     };
 
-    // Send the user message with audio to the chatbot
     onSendAudio(userAudioMessage);
   };
 

@@ -6,7 +6,6 @@ export default function UserMessage({ message }) {
     }
 
     if (message.sender === "bot") {
-      // Exclude microphone icon or recording button for bot messages
       return (
         <div className="bot-message">
           <span>{message.text}</span>
@@ -24,7 +23,6 @@ export default function UserMessage({ message }) {
       );
     }
 
-    // Handle other message types (e.g., text) for user messages
     return <div className="user-message">{message.text}</div>;
   };
 

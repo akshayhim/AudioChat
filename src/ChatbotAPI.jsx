@@ -18,7 +18,6 @@ const API = {
           message === "Record" ||
           message === "record"
         ) {
-          // Resolve the message and set show to true
           resolve({ message: "Recorder added below", show: true });
         } else if (
           message === "2" ||
@@ -38,13 +37,10 @@ const API = {
           message === "2. done" ||
           message === "2. Done"
         ) {
-          // Resolve the message and set show to false
           resolve({ message: "Recorder removed from below", show: false });
         } else if (message.includes("Audio")) {
-          // Special handling for audio messages
           resolve({ message: "Audio Message Received 😊", show: true });
         } else {
-          // Resolve the message and set show to true
           resolve({
             message:
               "This Audio Recording Chatbot has 2 options -\n" +
